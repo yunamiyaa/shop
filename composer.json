@@ -1,7 +1,0 @@
-{
-    "require": {
-    },
-    "require-dev": {
-        "laravel/ui": "^2.0"
-    }
-}

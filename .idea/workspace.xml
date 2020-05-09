@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75a554ef-b083-4747-8509-a0c2f7cb4749" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laradock" beforeDir="false" afterPath="$PROJECT_DIR$/laradock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laradock/mysql/my.cnf" beforeDir="false" afterPath="$PROJECT_DIR$/laradock/mysql/my.cnf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laradock/nginx/sites/default.conf" beforeDir="false" afterPath="$PROJECT_DIR$/laradock/nginx/sites/default.conf" afterDir="false" />
     </list>
@@ -18,7 +21,7 @@
     </execution>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/laradock" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -156,6 +159,7 @@
       <workItem from="1588646141573" duration="9903000" />
       <workItem from="1588750944239" duration="1079000" />
       <workItem from="1588762791654" duration="9843000" />
+      <workItem from="1588958061268" duration="534000" />
     </task>
     <servers />
   </component>
