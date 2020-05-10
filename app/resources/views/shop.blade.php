@@ -29,19 +29,19 @@
                             <div class="mycart_box">
                                 {{$stock->name}} <br>
                                 {{$stock->fee}}円<br>
-                                <img src="/image/{{$stock->imgpath}}" alt="" class="incart" >
+                                <img src="/image/{{$stock->filename}}" alt="" class="incart" >
                                 <br>
                                 {{$stock->content}} <br>
 
                                 {{-- 追加 --}}
 
 {{--                                <form action="cart" method="post">--}}
-                                    {!! Form::open(['method'=>'post', 'url'=>'/cart']) !!}
+                                    {!! Form::open(['method'=>'get', 'url'=>'/items']) !!}
                                     @csrf
                                     <input type="hidden" name="stock_id" value="{{ $stock->id }}">
-                                    {!! Form::select('number',config('shop.number'),'',['class'=>'form-control']) !!}
+{{--                                    {!! Form::select('number',config('shop.number'),'',['class'=>'form-control']) !!}--}}
 
-                                    <input type="submit" value="カートに入れる">
+                                    <input type="submit" value="詳細">
                                 {{Form::Close()}}
 {{--                                </form>--}}
 

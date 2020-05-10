@@ -9,7 +9,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
-
 class ShopController extends Controller
 {
     /**
@@ -32,11 +31,17 @@ class ShopController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function show(Request $request)
     {
-        //
+//        dd($request);
+        $stock_id = $request->stock_id;
+//        $stockId = $request->all()->;
+        $stock = Stocks::where('id', $stock_id)->get();
+//        dd($stock[0]->name);
+        return view('items')->with([
+            'stock' => $stock
+            ]);
     }
 
     /**
@@ -79,7 +84,8 @@ class ShopController extends Controller
     public function cart()
     {
 //        dd($id);
-        $carts = Carts::all();
+        $user_id = Auth::id();
+        $carts = Carts::where('user_id', $user_id)->get();
         return view('mycart')->with([
             'carts' => $carts
         ]);

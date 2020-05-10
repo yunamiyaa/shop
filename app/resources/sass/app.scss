@@ -397,3 +397,18 @@ hr {
     border-width: 0;
     border-top: 1px solid #ccc;
 }
+/* 三角の擬似要素
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+//.nub{
+//    position: relative;
+//}
+//.nub::after {
+//    content: "";
+//    position: absolute;
+//    bottom: 0;
+//    left: 0;
+//    width: 0;
+//    height: 0;
+//    border-bottom: 141px solid #f00;
+//    border-left: 141px solid transparent;
+//}

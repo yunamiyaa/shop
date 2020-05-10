@@ -3,25 +3,46 @@
 @section('content')
     <div class="container-fluid">
         <div class="container-fluid">
-            <div class="">
-                <div class="mx-auto" style="max-width:1200px">
-                    <h1 class="text-center font-weight-bold" style="color:#555555;  font-size:1.2em; padding:24px 0px;">
-                        {{ Auth::user()->name }}さんのカートの中身</h1>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card">
 
-                    <div class="">
-{{--                        <p class="text-center">{{ $message }}</p><br>--}}
-                        <div class="d-flex flex-row flex-wrap">
+                            <div class="card-body">
+                                <h1 class="text-center font-weight-bold" style="color:#555555;  font-size:1.2em; padding:24px 0px;">
+                                    {{ Auth::user()->name }}さんのカートの中身</h1>
 
-                            @foreach($carts as $cart)
-                                <div class="mycart_box">
-                                    <p>ユーザーID：{{$cart->user_id}}</p>
-                                    <p>ストックID：{{$cart->stock_id}}</p>
+                                <form method="POST" action="{{ route('login') }}">
+                                    @csrf
+                                    @foreach($carts as $cart)
+                                    <div class="form-group row">
+                                        <label for="email" class="col-md-4 col-form-label text-md-right">ユーザーID</label>
 
-                                    @endforeach
+                                        <div class="col-md-6">
+                                            {{$cart->user_id}}
+                                        </div>
+                                    </div>
 
-                                </div>
+                                    <div class="form-group row">
+                                        <label for="password" class="col-md-4 col-form-label text-md-right">ストックID</label>
 
-                                <a href="/">商品一覧へ</a>
+                                        <div class="col-md-6">
+                                            {{$cart->stock_id}}
+
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+
+                                    </div>
+
+                                    <div class="form-group row mb-0">
+
+                                    </div>
+                                </form>
+                                @endforeach
+
+                            </div>
                         </div>
                     </div>
                 </div>
