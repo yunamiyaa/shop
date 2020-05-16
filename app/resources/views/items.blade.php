@@ -11,7 +11,7 @@
                     <div class="">
                         <div class="d-flex flex-row flex-wrap">
 
-                            <div class="col-xs-6 col-sm-4 col-md-4 ">
+                            <div class="col-xs-6 col-sm-4 col-md-12 ">
                                 <div class="mycart_box">
                                     {{$stock[0]->name}} <br>
                                     {{$stock[0]->fee}}円<br>

@@ -22,3 +22,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/cart', 'ShopController@cart')->middleware('auth');
 Route::post('/items','ShopController@store');
 Route::get('/items', 'ShopController@show')->middleware('auth');;
+Route::post('/delete','ShopController@destroy')->name('delete');
+Route::post('/preview','ShopController@cartPreview')->name('preview');
+
