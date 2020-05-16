@@ -128,13 +128,13 @@
                                             </form>
 
                                             {{-- 追加 --}}
-                                            <a class="dropdown-item" href="{{ url('/mycart') }}">
+                                            <a class="dropdown-item" href="{{ url('/cart') }}">
                                                 カートを見る
                                             </a>
                                         </div>
                                     </li>
                                     {{-- 追加 --}}
-                                    <a href="{{ url('/mycart') }}" >
+                                    <a href="{{ url('/cart') }}" >
                                         <img src="{{ asset('image/cart.png') }}" class="cart" >
                                     </a>
                                 @endguest

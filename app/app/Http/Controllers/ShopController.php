@@ -18,9 +18,7 @@ class ShopController extends Controller
      */
     public function index()
     {
-        $stocks = Stocks::all(); //Eloquantで検索
-//        $stocks = Stocks::Paginate(2);
-//        dd($stocks);
+        $stocks = Stocks::all();
         $number = Config('shop,number');
         return view('shop')->with([
             'stocks' => $stocks,
@@ -34,11 +32,8 @@ class ShopController extends Controller
      */
     public function show(Request $request)
     {
-//        dd($request);
         $stock_id = $request->stock_id;
-//        $stockId = $request->all()->;
         $stock = Stocks::where('id', $stock_id)->get();
-//        dd($stock[0]->name);
         return view('items')->with([
             'stock' => $stock
             ]);
@@ -52,8 +47,6 @@ class ShopController extends Controller
      */
     public function store(Request $request)
     {
-//        dd($request);
-
         $user_id = Auth::id();
         $stock_id=$request->stock_id;
 
@@ -83,7 +76,6 @@ class ShopController extends Controller
      */
     public function cart()
     {
-//        dd($id);
         $user_id = Auth::id();
         $carts = Carts::where('user_id', $user_id)->get();
         return view('mycart')->with([
