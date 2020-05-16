@@ -77,10 +77,15 @@ class ShopController extends Controller
     public function cart()
     {
         $user_id = Auth::id();
-        $carts = Carts::where('user_id', $user_id)->get();
+        $carts = Carts::with('stock')->where('user_id', $user_id)->get();
         return view('mycart')->with([
             'carts' => $carts
         ]);
+    }
+
+    public function cartPreview(Request $request)
+    {
+        dd($request->all());
     }
 
     /**
@@ -112,8 +117,8 @@ class ShopController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        dd($request->all());
     }
 }

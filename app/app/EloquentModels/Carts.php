@@ -19,4 +19,9 @@ class Carts extends Model
 //    $user_id = Auth::id();
 //    return $this->where('user_id',$user_id)->get();
 //}
+
+    public function stock()
+    {
+        return $this->belongsTo('\App\EloquentModels\Stocks');
+    }
 }
